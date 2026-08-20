@@ -11,7 +11,42 @@ body {
     font-family: "Bradley Hand", cursive;
 }
 
+/* Establishes the homepage as the positioning boundary for the portrait. */
+.home-page {
+    position: relative;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+/* Keeps the written content centred and visually dominant. */
+.home-page> :not(.home-portrait) {
+    max-width: 720px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Places the portrait loosely beyond the right edge of the main content area. */
+.home-portrait {
+    position: absolute;
+    top: 1.25rem;
+    right: -3rem;
+    width: 220px;
+    height: auto;
+    border: 6px solid #fff;
+    box-shadow: 5px 7px 18px rgba(0, 0, 0, 0.2);
+    transform: rotate(2.5deg);
+}
+
+/* Moves the portrait into the page flow when there is not enough side space. */
+@media (max-width: 1250px) {
+    .home-portrait {
+        position: static;
+        display: block;
+        width: min(200px, 70vw);
+        margin: 1.5rem auto;
+    }
+}
+
 footer a {
     font-family: Calibri, sans-serif;
 }
-

@@ -1,0 +1,17 @@
+/* Author: Luca Scarica
+	Date: 3/9/2025 */
+
+/* Style for body specifies a background color */
+
+/* Centre all main content */
+body {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    font-family: "Bradley Hand", cursive;
+}
+
+footer a {
+    font-family: Calibri, sans-serif;
+}
+

@@ -75,11 +75,11 @@ body {
     height: 100%;
     object-fit: cover;
     box-sizing: border-box;
-    /* Matches the simple white frame and shadow used by the homepage portrait. */
+    /* A deeper shadow keeps the frame visible against the white page background. */
     border: 6px solid #fff;
-    box-shadow: 5px 7px 18px rgba(0, 0, 0, 0.2);
-    /* A gentler tilt keeps the full-height photo aligned while revealing the frame. */
-    transform: rotate(1deg);
+    box-shadow: 8px 10px 24px rgba(0, 0, 0, 0.3);
+    /* A visible but restrained tilt gives the portrait the loose homepage treatment. */
+    transform: rotate(2.25deg);
 }
 
 /* Stacks the photo beneath the text when two columns would feel cramped. */

@@ -47,6 +47,47 @@ body {
     }
 }
 
+/* Arranges the About text on the left and its portrait on the right. */
+.about-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 650px) 340px;
+    gap: 4rem;
+    align-items: start;
+    justify-content: center;
+    margin-top: 2rem;
+    padding: 0 1.5rem;
+}
+
+/* Left alignment makes the longer biography easier to read. */
+.about-copy {
+    text-align: left;
+}
+
+/* Removes the browser's default figure margin so the columns align neatly. */
+.about-photo {
+    margin: 0;
+}
+
+.about-photo img {
+    display: block;
+    width: 100%;
+    height: auto;
+    box-shadow: 5px 7px 18px rgba(0, 0, 0, 0.18);
+}
+
+/* Stacks the photo beneath the text when two columns would feel cramped. */
+@media (max-width: 900px) {
+    .about-layout {
+        grid-template-columns: minmax(0, 650px);
+        gap: 2rem;
+    }
+
+    .about-photo {
+        width: min(340px, 100%);
+        margin: 0 auto;
+    }
+}
+
 footer a {
     font-family: Calibri, sans-serif;
 }

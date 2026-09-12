@@ -78,6 +78,8 @@ body {
     /* Matches the simple white frame and shadow used by the homepage portrait. */
     border: 6px solid #fff;
     box-shadow: 5px 7px 18px rgba(0, 0, 0, 0.2);
+    /* A gentler tilt keeps the full-height photo aligned while revealing the frame. */
+    transform: rotate(1deg);
 }
 
 /* Stacks the photo beneath the text when two columns would feel cramped. */

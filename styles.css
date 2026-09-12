@@ -47,11 +47,11 @@ body {
     }
 }
 
-/* Arranges the About text on the left and its portrait on the right. */
+/* Arranges the About text on the left with a full-height portrait alongside it. */
 .about-layout {
     display: grid;
-    grid-template-columns: minmax(0, 650px) 340px;
-    gap: 4rem;
+    grid-template-columns: minmax(0, 650px) 300px;
+    gap: 3rem;
     align-items: start;
     justify-content: center;
     margin-top: 2rem;
@@ -63,28 +63,39 @@ body {
     text-align: left;
 }
 
-/* Removes the browser's default figure margin so the columns align neatly. */
+/* Stretches the portrait container from the first to the final line of the biography. */
 .about-photo {
     margin: 0;
+    height: 100%;
 }
 
 .about-photo img {
     display: block;
     width: 100%;
-    height: auto;
-    box-shadow: 5px 7px 18px rgba(0, 0, 0, 0.18);
+    height: 100%;
+    object-fit: cover;
+    box-sizing: border-box;
+    /* Matches the simple white frame and shadow used by the homepage portrait. */
+    border: 6px solid #fff;
+    box-shadow: 5px 7px 18px rgba(0, 0, 0, 0.2);
 }
 
 /* Stacks the photo beneath the text when two columns would feel cramped. */
-@media (max-width: 900px) {
+@media (max-width: 1020px) {
     .about-layout {
         grid-template-columns: minmax(0, 650px);
         gap: 2rem;
     }
 
     .about-photo {
-        width: min(340px, 100%);
+        width: min(250px, 100%);
+        height: auto;
         margin: 0 auto;
+    }
+
+    /* Restores the photo's natural proportions after it moves below the text. */
+    .about-photo img {
+        height: auto;
     }
 }
 

@@ -101,7 +101,7 @@ body {
     }
 }
 
-/* Gives the second blog a right-hand photo with the About page's framed treatment. */
+/* Places blog text on the left and photos in a right-hand column. */
 .blog-layout {
     display: grid;
     grid-template-columns: minmax(0, 650px) minmax(0, 400px);
@@ -118,6 +118,29 @@ body {
 
 .blog-photo {
     margin: 0;
+}
+
+/* Keeps the Italy photos plain and vertically spaced, with their captions. */
+.blog-gallery {
+    display: grid;
+    gap: 2rem;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto 2rem;
+}
+
+.blog-gallery figure {
+    margin: 0;
+}
+
+.blog-gallery img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.blog-gallery figcaption {
+    margin-top: 0.5rem;
 }
 
 .blog-photo img {

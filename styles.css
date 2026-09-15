@@ -101,6 +101,47 @@ body {
     }
 }
 
+/* Gives the second blog a right-hand photo with the About page's framed treatment. */
+.blog-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 650px) minmax(0, 400px);
+    gap: 3rem;
+    align-items: start;
+    justify-content: center;
+    margin-top: 2rem;
+    padding: 0 1.5rem;
+}
+
+.blog-copy {
+    text-align: left;
+}
+
+.blog-photo {
+    margin: 0;
+}
+
+.blog-photo img {
+    display: block;
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+    border: 6px solid #fff;
+    box-shadow: 8px 10px 24px rgba(0, 0, 0, 0.3);
+    transform: rotate(2.25deg);
+}
+
+@media (max-width: 1020px) {
+    .blog-layout {
+        grid-template-columns: minmax(0, 650px);
+        gap: 2rem;
+    }
+
+    .blog-photo {
+        width: min(400px, 100%);
+        margin: 0 auto 2rem;
+    }
+}
+
 footer a {
     font-family: Calibri, sans-serif;
 }
